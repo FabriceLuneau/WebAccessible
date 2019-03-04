@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";	
+
+	    .button1{
+      padding:2px;
+       border: 1px solid #CCC;
+      }
+      
+      .button1Activated{
+       border: 2px solid #000;
+      }
+      
+      
