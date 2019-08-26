@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+	<html lang="fr">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bouton à base de Div ou de Span</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="JavaScript/accessibilityFacilities.js" type="text/javascript"></script>
+</head>
+<body role="document">
+<h1>Bouton à base de DIV ou de SPAN</h1>
+
+Si vous utilisez une DIV ou une SPAN combiné à du CSS, pour créer un bouton personalisé.
+L'apparence de l'élément sera modifié, mais  pas sa sémantique.
+Il faut :
+<ul>
+<li>ajouter l'attribut role='button'", pour sgnaler la fonction réelle de l'élément"</li>
+<li>ajouter la  propriété "tabIndexproperty" pour rendre l'élement foccussable</ul>
+<li>Gérer le focus au clavier touche espace et entré, et à la sourie.</li>
+	</ul>
+	
+	<h2>Example</h2>
+	<h3>A ne pas faire</h3>
+	<ul>
+	<li>Ce bouton n'est pas attaignable avec la touche "tab".	</li>
+	<li>Il n'est pas marqué comme un bouton, et le lecteur d'écran le considère comme faisant partie intégrante du text.</li>
+	<li>Par défaut le code JavaScript ne prend en compte que la sourie</li>
+	</ul>
+	<span class="button1" id="Bouton inaccessible" onClick="alert('validé !')">
+	 Bouton inaccessible
+	</span>
+	<h3>A faire</h3>
+	<span class="button1" id="button" role="button" tabindex="0" onClick="alert('validé !')" onKeyUp="if(isValidated(event)) {isValidated()}">
+	 Bouton accessible
+	</span>
+	
+	<h2>Code</h2>
+&lt;span class="button1" id="button" role="button" tabindex="0" onClick="alert('validated !')" onKeyUp="if(isValidated(event)) {isValidated()}"&gt;
+	 Button
+	&lt;/span&gt;
+	 </main>
+</body>
+</html>
