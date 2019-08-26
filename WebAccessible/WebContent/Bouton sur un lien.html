@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bouton sur un lien hypertext</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="JavaScript/accessibilityFacilities.js" type="text/javascript"></script>
+</head>
+<body role="document">
+	<main role="main">
+	<h1>Bouton sur un lien hypertext</h1>
+	<h2>Description</h2>
+	Il est possible de modifier l'aspect d'un lien avec le CSS, pour lui donner l'apparence d'un bouton.
+	Cependant il ne sera pas reconnu en tant que tel par le lecteur d'écran, mais toujours comme un lien hypertext.
+	Et la gestion de ses évènements sera partiel.  
+	
+	Il faut :
+	<ul>
+	<li>modifier le role avevec ""role='button'"</li>
+	<li>Gérer le focus en JavaScript avec les touches espaces et entré</li>
+	</ul>
+	
+	<h3>A ne pas faire</h3>
+	<a class="button1" href="">
+	Bouton
+	</a>
+	
+	<h3>A faire</h3>
+	<a class="button1"  role="button" onClick="alert('validé !')">
+	Button
+	</a>	
+	<h2>Code</h2>
+	  
+	 </main>
+
+</body>
+</html>
